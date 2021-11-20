@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.form-control{
+    max-width: 200px;
+    margin: auto;
+}
+
+.challenge {
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: black;
+    background-color: whitesmoke;
+}
+
+.btn-primary {
+    width: 200px;
+}
+
+.container {
+    max-width: 400px;
+}
+
+.showText {
+    width: 80%;
+}
