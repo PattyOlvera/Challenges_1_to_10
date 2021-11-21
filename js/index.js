@@ -134,6 +134,14 @@ function maxOfArray(){
 }
 
 // Challenge 9 Sort information
+let arrayToSort = [];
+function createArrayToSort(){
+    let numberElement = parseInt(document.querySelector("#arrayToSort").value);
+    arrayToSort.push(numberElement);
+    document.querySelector("#arrayToSort").value = "";
+    document.querySelector("#arrayToSortShow").value = arrayToSort;
+}
+
 function sortBestRatingsFirst(numbers){
 // sort the array [5,8,9,3,10]
 // know MAX and it's index
@@ -151,10 +159,9 @@ function sortBestRatingsFirst(numbers){
         numbers[maxLocation] = numbers[j];
         numbers[j] = maximum;        
     }
+    document.querySelector("#showResultArray").value = numbers;
     return numbers;
 }
 
-console.log(sortBestRatingsFirst([5,8,9,3,10]));
-console.log(sortBestRatingsFirst([9,8,1,12,3,10]));
-console.log(sortBestRatingsFirst([5,9,8,1,12,3,10]));
+
 

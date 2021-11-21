@@ -132,7 +132,7 @@
       <h1>Challenge 7 and 8</h1>
       <h2>Finding the minimum and maximum</h2>
       <div class="mb-3">
-        <label for="arrayOfNumbers" class="form-label">Enter number to create an array</label>
+        <label for="arrayOfNumbers" class="form-label">Enter numbers to create an array</label>
         <input type="text" class="form-control" id="arrayOfNumbers">
       </div>
       <div class="mb-3">
@@ -156,7 +156,19 @@
     </div>
     <div class="challenge" id="challenge9">
       <h1>Challenge 9</h1>
-      <h2>Sort the biggest Numbers</h2>
+      <h2>Sort an array</h2>
+      <div class="mb-3">
+        <label for="arrayToSort" class="form-label">Enter numbers to create an array</label>
+        <input type="text" class="form-control" id="arrayToSort">
+      </div>
+      <div class="mb-3">
+        <button type="button" class="btn btn-primary" onclick="createArrayToSort()">Add Number to Array</button>
+      </div>
+      <input type="text" class="form-control" id="arrayToSortShow">
+      <div class="mb-3">
+        <button type="button" class="btn btn-primary" onclick="sortBestRatingsFirst(arrayToSort)">Sort Array</button>
+        <input type="text" class="form-control" id="showResultArray">
+      </div>
     </div>
     <div class="challenge" id="challenge10">
       <h1>Challenge 10</h1>
