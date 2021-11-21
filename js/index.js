@@ -134,28 +134,27 @@ function maxOfArray(){
 }
 
 // Challenge 9 Sort information
-let array1 = [3,5,1,89,8];
-function bestRatingFirst(numbers){
-    let maxNumber = maxArray(numbers);
-    console.log(maxNumber);
-    console.log(array1.indexOf(maxNumber));
-    // let newArray = [];
-    let tempValue = array1[array1.indexOf(maxNumber)];
-    array1[array1.indexOf(maxNumber)] = array1[0];
-    array1[0]=tempValue;
-    console.log(array1);
-}
+function sortBestRatingsFirst(numbers){
+// sort the array [5,8,9,3,10]
+// know MAX and it's index
+    for (let j = 0; j < numbers.length - 1; j++){
+        let maximum = numbers[j];
+        let maxLocation = j;
 
-function maxArray(numbers){
-    let max = numbers[0];
-    for (let i = 0; i <= numbers.length; i++){
-    if( max < numbers[i+1]){
-        max = numbers[i+1];
+        for(let i = j; i < numbers.length; i++){
+            if( numbers[i] > maximum){
+                maximum = numbers[i];
+                maxLocation = i;
+            }
         }
+        // Swap the max number with first element
+        numbers[maxLocation] = numbers[j];
+        numbers[j] = maximum;        
     }
-    return max;
+    return numbers;
 }
 
-bestRatingFirst(array1);
-
+console.log(sortBestRatingsFirst([5,8,9,3,10]));
+console.log(sortBestRatingsFirst([9,8,1,12,3,10]));
+console.log(sortBestRatingsFirst([5,9,8,1,12,3,10]));
 
